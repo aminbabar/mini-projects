@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    console.log(\"hi\");\n});\n\n//# sourceURL=webpack://testproject/./src/index.js?");
+eval("\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    \n});\n\n\n//# sourceURL=webpack://infinite-scroller/./src/index.js?");
 
 /***/ })
 
