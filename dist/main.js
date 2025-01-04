@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    \n});\n\n\n//# sourceURL=webpack://infinite-scroller/./src/index.js?");
+eval("\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    const API_BASE_URL = 'http://localhost:3000/api/testimonials';\n    const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';\n    const API_URL = 'https://api.frontendexpert.io/api/fe/testimonials';\n\n    const testimonials = [];\n    let hasNext = true;\n    const testimonialContainer = document.querySelector(\"#testimonial-container\");\n\n    function fetchData(limit, after) {\n        fetch(`${API_BASE_URL}?limit=5`)\n            .then(data => data.json())\n            .then(data => {\n                if (!data.hasNext) {\n                    hasNext = false;\n                }\n                addTestimonial(data.testimonials);\n            });\n    }\n\n    function addTestimonial(testimonials) {\n        const container = document.createDocumentFragment();\n        testimonials.forEach((testimonial) => {\n            const p = document.createElement('p');\n            p.append(testimonial.message);\n            p.classList.add('testimonial');\n            container.append(p);\n        });\n        testimonialContainer.append(container);\n    }\n\n    fetchData(5);\n});\n\n\n//# sourceURL=webpack://infinite-scroller/./src/index.js?");
 
 /***/ })
 
