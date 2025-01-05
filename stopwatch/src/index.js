@@ -1,5 +1,5 @@
-
+import Stopwatch from './components/stopwatch';
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("setup");
+    new Stopwatch();
 });
