@@ -1,5 +1,7 @@
+import MemoryGame from "./MemoryGame";
+
 function App() {
-  return <h1> Hello from App </h1>;
+  return <MemoryGame />
 }
 
 export default App;
